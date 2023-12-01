@@ -1,0 +1,13 @@
+[*]
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.yml]
+indent_size = 2
+
+[*.json]
+insert_final_newline = false
+
+[*.md]
+trim_trailing_whitespace = false

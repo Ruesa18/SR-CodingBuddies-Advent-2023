@@ -1,0 +1,6 @@
+.dde
+
+/vendor/
+var/
+
+phpunit.xml
