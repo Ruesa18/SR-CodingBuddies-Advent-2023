@@ -9,26 +9,16 @@ class PhoneNumberSearchManager {
 
     public function findSolution(\DateTimeImmutable $dateTime): int {
         $dateSum = $this->getSumOfDate($dateTime);
-
         $phoneNumber = $this->getByPosition($dateSum);
         return $this->getSignificantPart($phoneNumber);
     }
 
     public function getSumOfDate(\DateTimeImmutable $dateTime): int {
-        $numbers = explode('.', $dateTime->format('d.m.Y'));
-        $dateSum = 0;
-        foreach($numbers as $numberString) {
-            if(!is_numeric($numberString)) {
-                throw new \RuntimeException('String is not number');
-            }
-            $dateSum += $numberString;
-        }
-        return $dateSum;
+        return array_sum(explode('.', $dateTime->format('d.m.Y')));
     }
 
     public function getSignificantPart(string $phoneNumber): int {
-        $significantNumber = substr($phoneNumber, -2);
-        return (int) $significantNumber;
+        return (int) substr($phoneNumber, -2);
     }
 
     public function getByPosition(int $position): string {
