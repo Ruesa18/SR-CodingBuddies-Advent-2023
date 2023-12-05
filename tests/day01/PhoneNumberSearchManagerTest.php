@@ -86,6 +86,7 @@ class PhoneNumberSearchManagerTest extends TestCase {
         $solution = $this->phoneNumberSearchManager->findSolution($dateTime);
 
         $this->assertIsInt($solution);
+        echo "\r\n\r\nDay 01";
         echo sprintf("\r\n\r\nThe solution is: %s\r\n\r\n", $solution);
     }
 
