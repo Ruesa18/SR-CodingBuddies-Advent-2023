@@ -6,10 +6,11 @@ class ShipFinder {
     private string $pattern = '1010-1';
 
     public function findLongestOccurrenceCount(string $input): int {
-        $regex = sprintf('/(%s)*/', $this->pattern);
+        $regex = sprintf('/(%s)+/', $this->pattern);
         $matches = [];
         preg_match_all($regex, $input, $matches, PREG_PATTERN_ORDER);
 
+        var_dump($matches);
         $biggestMatch = 0;
         foreach($matches[0] as $match) {
             $symbolCount = strlen($match) / strlen($this->pattern);
