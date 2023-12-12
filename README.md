@@ -16,3 +16,7 @@ Simply run `make help` to see a list of available commands.
 ### Install the needed packages
 To install everything you need, run `make install`. 
 This will set up the container with all needed packages.
+
+## The Challenges
+In case the challenges are not online anymore, you can also find them in the [tasks/ directory](tasks). 
+Feel free to try them yourself before looking at my solutions 😉
